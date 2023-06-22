@@ -29,6 +29,8 @@ jobs:
         tags: []
     commands:
       - anchor build
+      - ls -al
+      - ls -al target      
     artifacts:
       - name: programs
         path: target
@@ -42,8 +44,6 @@ jobs:
     commands:
       - scripts/prepare.sh
       - anchor build
-      - ls -al
-      - ls -al target
     artifacts:
       - name: programs
         path: target
