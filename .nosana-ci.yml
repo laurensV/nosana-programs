@@ -59,7 +59,7 @@ jobs:
     commands:
       - echo "${TEST_KEY}" > "${PRIVATE_KEY_PATH}"
       - npm ci
-      - anchor test --skip-build
+      - anchor test
     resources:
       - name: programs
         path: .
