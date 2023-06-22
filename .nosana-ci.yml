@@ -42,6 +42,8 @@ jobs:
     commands:
       - scripts/prepare.sh
       - anchor build
+      - ls -al
+      - ls -al target
     artifacts:
       - name: programs
         path: target
@@ -59,6 +61,7 @@ jobs:
     commands:
       - echo "${TEST_KEY}" > "${PRIVATE_KEY_PATH}"
       - npm ci
+      - ls -al
       - ls -al target
       - ls -al target/deploy
       - anchor test
