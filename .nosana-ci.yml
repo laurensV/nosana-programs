@@ -59,6 +59,8 @@ jobs:
     commands:
       - echo "${TEST_KEY}" > "${PRIVATE_KEY_PATH}"
       - npm ci
+      - ls -al target
+      - ls -al target/deploy
       - anchor test
     resources:
       - name: programs
